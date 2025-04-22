@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(background.jpeg) no-repeat center center fixed;
+}
+
+.car{
+    height: 180px;
+    width: 280px;
+}
+
+.car1{
+    position: absolute;
+    bottom: 150px;
+    animation: car1Move 5s linear 0s infinite normal;
+}
+
+.car2{
+    position: absolute;
+    bottom: 120px;
+    right:0px;
+    animation: car2Move 5s linear 0s infinite normal;
+}
+
+
+.c1wh1{
+    height: 63px;
+    width: 65px;
+    position: absolute;
+    left: 20px;
+    bottom: 37px;
+    animation: rotateWheel 1s linear infinite;
+
+}
+.c1wh2{
+    height: 63px;
+    width: 65px;
+    position: absolute;
+    right: 24px;
+    bottom: 35px;
+    animation: rotateWheel 1s linear infinite;
+
+}
+
+.c2wh1{
+    height: 63px;
+    width: 65px;
+    position: absolute;
+    left: 28px;
+    bottom: 30px;
+    animation: rotateWheel 1s linear infinite reverse;
+}
+.c2wh2{
+    height: 63px;
+    width: 65px;
+    position: absolute;
+    right: 22px;
+    bottom: 35px;
+    animation: rotateWheel 1s linear infinite reverse;
+}
+
+.girl{
+    height: 190px;
+    width: 120px;
+    animation: removeEle 0.5s 5s ease 1;
+    animation-fill-mode: forwards;
+}
+.gpos{
+    position: absolute;
+    bottom: 26px;
+    animation: girlMove 5s linear 1 ;
+    animation-fill-mode: forwards;
+}
+.ballon1{
+    height: 110px;
+    width: 40px;
+    position: absolute;
+    bottom: 110px;
+    left: 2px;
+    animation: ballonUP 5s 5s linear 1;
+    animation-fill-mode: forwards;
+}
+.boy{
+    height: 190px;
+    width: 120px;
+    animation: removeEle 0.5s 5s ease 1;
+    animation-fill-mode: forwards;
+}
+.bpos{
+    position: absolute;
+    bottom: 26px;
+    right: 0px;
+    animation: boyMove 5s linear 1 ;
+    animation-fill-mode: forwards;
+
+}
+.ballon2{
+    height: 130px;
+    width: 80px;
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    animation: ballonUP 4s 5s linear 1;
+    animation-fill-mode: forwards;
+
+}
+.finalImg{
+    height: 130px;
+    width: 80px;
+    position: absolute;
+    left: 47.2%;
+    bottom: 90px;
+}
+.fimg{
+    height: 190px;
+    width: 120px;
+    opacity: 0;
+    animation: popOP 0.5s 5.2s ease 1;
+    animation-fill-mode: forwards;
+
+}
+@keyframes car1Move{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 80%;
+       
+    }
+}
+
+@keyframes car2Move{
+    0%{
+        right: 0;
+        /* transform: translate(0,0); */
+    }
+    100%{
+        right: 85%;
+        /* transform: translate(100%,0); */
+    }
+}
+
+@keyframes rotateWheel{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes girlMove{
+    0%{
+        left:0%;
+    }
+    100%{
+        left:43%;
+    }
+}
+@keyframes boyMove{
+    0%{
+        right:0%;
+    }
+    100%{
+        right:41%;
+    }
+}
+
+@keyframes ballonUP{
+    0%{
+            bottom: 100px;
+    }
+    50%{
+            bottom: 250px;
+            opacity: 0.5;
+        }
+    100%{
+        bottom: 370px;
+        opacity: 0;
+    }
+} 
+
+@keyframes popOP{
+    0%{
+        opacity: 0;
+    }
+    /* 40%{
+        opacity: 0.4;
+    }
+    70%{
+        opacity: 0.7;
+    } */
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes removeEle{
+    100%{
+        opacity: 0;
+    }
+}
